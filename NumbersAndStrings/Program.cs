@@ -10,27 +10,18 @@ namespace NumbersAndStrings
     {
         static void Main(string[] args)
         {
-            //int index = 10000;
+            // Accumulation Problem
 
-            //int oneThird = index / 3;
+            decimal deposit = 35.00M;
 
-            //int remainder = index % 3;
-
-            var increment = 1.0 / 3.0; //0.125;
-            var total = 0.0;
-
-            for (int i = 0; i < 100000; i++)
-            {
-                total = increment * (double)i;
-                Console.WriteLine(total);
-                if (i % 20 == 0)
-                {
-                    Console.WriteLine("Pausing...");
-                    //Console.ReadLine();
-                }
-            }
+            Console.WriteLine("If you save " + deposit + " every day, you will have:");
+            Console.WriteLine("{0:C} after 1 year.", (deposit * 365).ToString());
+            Console.WriteLine((deposit * 365 * 2) + " after 2 years.");
+            Console.WriteLine((deposit * 365 * 5) + " after 5 years.");
+            Console.WriteLine((deposit * 365 * 10) + " after 10 years.");
 
             Console.ReadLine();
+
         }
     }
 }
