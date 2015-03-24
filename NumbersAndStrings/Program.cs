@@ -24,7 +24,36 @@ namespace NumbersAndStrings
             //var both = string.Concat(hello, upperHello, "Even more text");
             //Console.WriteLine(both);
 
+            // String processing lab
 
+            int size = args.Length;
+            // Print out the string in reverse order
+            
+            for (int i = size-1; i >= 0; i--)
+            {
+                Console.Write(args[i] + " ");
+            }
+            Console.WriteLine();
+
+            // Print out the string in UPPERCASE
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write(args[i].ToUpper() + " ");
+            }
+            Console.WriteLine();
+
+            //Concatenate the string, seperate by commas
+
+            string newString = "";
+            for (int i = 0; i < size; i++)
+            {
+                if (i != size - 1)
+
+                    newString = string.Concat(newString,args[i], ",");
+                else
+                    newString = string.Concat(newString,args[i]);
+            }
+            Console.WriteLine(newString);
 
             Console.ReadLine();
 
