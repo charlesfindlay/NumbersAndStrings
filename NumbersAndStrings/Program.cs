@@ -49,21 +49,32 @@ namespace NumbersAndStrings
 
             // Space Exploration
 
-            int startSpeed;
+
+            
+            double startSpeed;
             double finalSpeed;
             int boostTime;
             double boostPer;
+            int hours;
 
             Console.Write("Enter spaceship velocity: ");
             startSpeed = int.Parse(Console.ReadLine());
             Console.Write("Enter minutes of boost time: ");
             boostTime = int.Parse(Console.ReadLine());
+            Console.Write("Enter boost/coast cycle time in hours: ");
+            hours = int.Parse(Console.ReadLine());
 
             boostPer = Math.Pow(1.05, (boostTime * 60 / 30));
-            finalSpeed = boostPer * startSpeed;
-            Console.WriteLine("After {0} minutes your space ship will be going {1} MPH", boostTime, finalSpeed);
+
+            for (int minutes = 15; minutes <= hours*60; minutes += 15)
+            {
+                finalSpeed = boostPer * startSpeed;
+                Console.WriteLine("After {0} minutes your space ship will be going {1} MPH", minutes, finalSpeed);
+                startSpeed = finalSpeed;
+            }
 
             Console.ReadLine();
+            
 
             
 
