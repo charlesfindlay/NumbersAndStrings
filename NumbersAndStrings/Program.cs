@@ -12,17 +12,30 @@ namespace NumbersAndStrings
         {
             // Accumulation Problem
 
-            /*
-            decimal deposit = 35.00M;
+            Console.Write("Enter daily deposit: ");
+            decimal deposit = decimal.Parse(Console.ReadLine());
+            Console.Write("Enter interest rate: ");
+            decimal rate = decimal.Parse(Console.ReadLine());
+            Console.Write("Enter years to save: ");
+            int years = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("If you save " + deposit + " every day, you will have:");
-            Console.WriteLine("{0:C} after 1 year.", (deposit * 365).ToString());
-            Console.WriteLine((deposit * 365 * 2) + " after 2 years.");
-            Console.WriteLine((deposit * 365 * 5) + " after 5 years.");
-            Console.WriteLine((deposit * 365 * 10) + " after 10 years.");
+            Console.WriteLine("If you save {0:C} every day, you will have:", deposit);
+
+            decimal balance = 0.00M;
+            decimal dailyRate = (rate / 100 / 365) + 1;
+            for (int days = 0; days <= years * 365; days++)
+            {
+                balance = balance * dailyRate + deposit;
+                if (days % 365 == 0  && days != 0)
+                {
+                    Console.WriteLine("{0:C} after {1} years.", balance, days / 365);
+                }
+
+
+            }
 
             Console.ReadLine();
-            */
+            
             
             // Land Cost Calculator
 
@@ -49,7 +62,7 @@ namespace NumbersAndStrings
 
             // Space Exploration
 
-
+            /*
             
             double startSpeed;
             double finalSpeed;
@@ -74,8 +87,8 @@ namespace NumbersAndStrings
             }
 
             Console.ReadLine();
+            */
             
-
             
 
         }
