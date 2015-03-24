@@ -1,0 +1,8 @@
+﻿Text manipulation is a core skill
+
+string is important enough to be a keyword. It maps to System.String. More info is online.
+
+C# is a strongly typed, static typed language
+
+Therefore must do conversions between types of variables string-number or reverse.
+

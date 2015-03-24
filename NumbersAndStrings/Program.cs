@@ -10,6 +10,27 @@ namespace NumbersAndStrings
     {
         static void Main(string[] args)
         {
+
+            // Instructor example code
+
+            //string hello = "This is some text";
+            //var upperHello = hello.ToUpper();
+            
+            //Console.WriteLine(hello);
+
+            //if (string.IsNullOrWhiteSpace(hello))
+            //    Console.WriteLine("Nothing Here");
+
+            //var both = string.Concat(hello, upperHello, "Even more text");
+            //Console.WriteLine(both);
+
+
+
+            Console.ReadLine();
+
+
+
+
             // Accumulation Problem
 
             /*
@@ -93,6 +114,8 @@ namespace NumbersAndStrings
             
             // Solve the quadratic formula
 
+
+            /*
             Console.WriteLine("Let's solve a quadratic equation! Yipee :)");
             Console.Write("Enter a value for a: ");
             double a = double.Parse(Console.ReadLine());
@@ -116,7 +139,7 @@ namespace NumbersAndStrings
             }
 
             Console.ReadLine();
-
+            */
 
         }
     }
