@@ -26,6 +26,7 @@ namespace NumbersAndStrings
             
             // Land Cost Calculator
 
+            /*
             decimal sqYardCost = 5.0M;
             decimal perimeterCost = 0.75M;
             int length;
@@ -43,6 +44,28 @@ namespace NumbersAndStrings
             Console.WriteLine("The cost of the land you're buying is {0:C}", landcost);
 
             Console.ReadLine();
+             */ 
+             
+
+            // Space Exploration
+
+            int startSpeed;
+            double finalSpeed;
+            int boostTime;
+            double boostPer;
+
+            Console.Write("Enter spaceship velocity: ");
+            startSpeed = int.Parse(Console.ReadLine());
+            Console.Write("Enter minutes of boost time: ");
+            boostTime = int.Parse(Console.ReadLine());
+
+            boostPer = Math.Pow(1.05, (boostTime * 60 / 30));
+            finalSpeed = boostPer * startSpeed;
+            Console.WriteLine("After {0} minutes your space ship will be going {1} MPH", boostTime, finalSpeed);
+
+            Console.ReadLine();
+
+            
 
         }
     }
