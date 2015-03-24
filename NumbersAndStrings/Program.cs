@@ -12,6 +12,7 @@ namespace NumbersAndStrings
         {
             // Accumulation Problem
 
+            /*
             Console.Write("Enter daily deposit: ");
             decimal deposit = decimal.Parse(Console.ReadLine());
             Console.Write("Enter interest rate: ");
@@ -35,7 +36,7 @@ namespace NumbersAndStrings
             }
 
             Console.ReadLine();
-            
+            */
             
             // Land Cost Calculator
 
@@ -90,6 +91,32 @@ namespace NumbersAndStrings
             */
             
             
+            // Solve the quadratic formula
+
+            Console.WriteLine("Let's solve a quadratic equation! Yipee :)");
+            Console.Write("Enter a value for a: ");
+            double a = double.Parse(Console.ReadLine());
+            Console.Write("Enter a value for b: ");
+            double b = double.Parse(Console.ReadLine());
+            Console.Write("Enter a value for c: ");
+            double c = double.Parse(Console.ReadLine());
+
+            // parts of equations
+            double positive = ((-b + Math.Sqrt(b*b - 4*a*c)) / 2*a);
+            double negative = ((-b - Math.Sqrt(b * b - 4 * a * c)) / 2 * a);
+
+            if (double.IsNaN(positive) || double.IsNaN(negative))
+            {
+                Console.WriteLine("The equation has no solution");
+
+            }
+            else
+            {
+                Console.WriteLine("The answer is {0} and {1}", positive, negative);
+            }
+
+            Console.ReadLine();
+
 
         }
     }
