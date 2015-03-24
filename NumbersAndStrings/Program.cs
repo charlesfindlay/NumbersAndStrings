@@ -28,19 +28,27 @@ namespace NumbersAndStrings
 
             int size = args.Length;
             // Print out the string in reverse order
-            
+            string backString = "";
             for (int i = size-1; i >= 0; i--)
             {
-                Console.Write(args[i] + " ");
+               if (i != 0)
+                   backString = string.Concat(backString,args[i]," ");
+               else
+                   backString = string.Concat(backString,args[i]);
+ 
             }
-            Console.WriteLine();
+            Console.WriteLine(backString);
 
             // Print out the string in UPPERCASE
+            string myString = "";
             for (int i = 0; i < size; i++)
             {
-                Console.Write(args[i].ToUpper() + " ");
+                if (i != size - 1)
+                    myString = string.Concat(myString, args[i], " ");
+                else
+                    myString = string.Concat(myString, args[i]);
             }
-            Console.WriteLine();
+            Console.WriteLine(myString.ToUpper());
 
             //Concatenate the string, seperate by commas
 
